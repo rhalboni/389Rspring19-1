@@ -1,0 +1,18 @@
+# Writeup 1 - Ethics
+
+Name: Rami Halboni
+Section: 0101
+
+I pledge on my honor that I have not given or received any unauthorized assistance on this assignment or examniation.
+
+Digital acknowledgement: Rami
+
+## Assignment Writeup
+
+### Part 1 (25 pts)
+
+This was done via the [ELMS assignment](). (we'll post an announcement when this is ready!)
+
+### Part 2 (75 pts)
+
+Working at a automative manufacturer you have a responsibility in making safe and secure cars. Since hundreds of thousands of people will be driving these cars that we develop any security issue should be brought to the attention of someone. After concluding that the ECU firmware has some serious security issues, I would not hesitate to inform my boss, as soon as possible. People's live's and safety are more important than any deadline we may have. After informing my boss the next form of action would be to inform a Consumer Watchdog, telling them of the issues, that we are in the middle of patching them, and we are looking to postpone the release. I would not inform the public unless the firmware was released, until then we are not endangering anyone, so they don't neccesarirly have to know. If my company was unwilling to postpone the release of the ECU, then I would have no choice but to bring it to the public's attention, giving them bad publicity, and forcing them to delay the release. I would most likely lose my job after publicisizing the info, but the safety of our customer is more imprtant to me than a paycheck.If I was do nothing I would definetly be responsible because I did nothing to stop it. It is just like how if you did not stop a bully in school, you are not innocent because all you did was watch and laugh. You are just as responsible as the bully, for not doing anything.
