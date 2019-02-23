@@ -32,7 +32,8 @@ Elizabeth works at Elite Banking, and the website is 1337bank.money
 - /secret_directory, found by robots.txt
 - User-agent: *, found by robots.txt
 6. What ports are open on the website? What services are running behind these ports? How did you discover this?
-FTP(21), SMTP(25), HTTP(80), POP3(110), IMAP(143), HTTPS(443), 1337(waste) I used Domain Dossier and ran a service scan.
+After running nmap I found these open ports:
+SSH(22), HTTP(80),1337(waste) 
 
 7. Which operating system is running on the website? How did you discover this?
 using shodan i enterered ub tge Host IP address and found that the OS running the site is Ubuntu
@@ -47,4 +48,4 @@ CMSC389R-{0M3G4LUL_G3T_pWN3d_N00b}, reddit
 when I found flag.txt, I ran cat flag.txt and got:
 	Good work! Here's a flag: CMSC389R-{brut3_f0rce_m4ster}
 
-*Please use this space to detail your approach and solutions for part 2. Don't forget to upload yourcompleted source code to this /writeup directory as well!*
+*After connecting to the host server I noticed that for any incorrect combination of username and password it would automatically disconnect. And I know v0idcache is very likely to be the username to the server. With this information I looped through all the possible passwords in rockyou.txt hoping that one would be the correct password. What I would do in every iteration is login, enter the username, and enter the password, at the line im reading, if it is incorrect I would read the next line, and retry over and over again. Once the username and password are correct I get access to server, and now I have full control of the server through the python code *
