@@ -3,7 +3,7 @@ OSINT (Open Source Intelligence)
 
 ## Assignment details
 
-This assignment has two parts. It is due by Thursday, February 21 at 11:59 PM.
+This assignment has two parts. It is due by Friday, February 22 at 11:59 PM.
 
 To submit your homework, please follow the guidelines posted under the grading section of the syllabus.
 
@@ -43,8 +43,12 @@ Elizabeth works at Elite Banking, and the website is 1337bank.money
 6. What ports are open on the website? What services are running behind these ports? How did you discover this?
 FTP(21), SMTP(25), HTTP(80), POP3(110), IMAP(143), HTTPS(443), 1337(waste) I used Domain Dossier and ran a service scan.
 
+<<<<<<< HEAD
 7. Which operating system is running on the website? How did you discover this?
 using shodan i enterered ub tge Host IP address and found that the OS running the site is Ubuntu
+=======
+7. Which operating system is running on the server that is hosting the website? How did you discover this?
+>>>>>>> upstream/master
 
 8. **BONUS:** Did you find any other flags on your OSINT mission? (Up to 9 pts!)
 CMSC389R-{YWX4H3d3Bz6dx9lG32Odv0JZh}, A4300.txt, pastebin
