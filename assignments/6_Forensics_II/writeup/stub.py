@@ -48,37 +48,39 @@ offset = 24
 print("-------  BODY  -------")
 while i < int(sec_count):
 	stype, slen = struct.unpack("<LL", data[offset:offset+8])
-	print(str(hex(stype)) + ' ' +  str(slen))
+	print("------- Section %d: --------" % (i+1))
+	print("Section Type: %s" % hex(stype))
+	print("Section Length: %s" % (slen))
 	if stype == 0x1:
 		sval = struct.unpack("<" + str(slen) + "s", data[offset+8:offset+8+slen])
-		print(sval[0])
+		print("Section Value: %s" % sval[0])
 	elif stype == 0x2:
 		sval = struct.unpack("<" + str(slen) + "s", data[offset+8:offset+8+slen])
-		print(sval)
+		print("Section Value: %s" % sval[0])
 	elif stype == 0x3:
 		length = slen / 4
 		sval = struct.unpack("<" + str(length) + "L", data[offset+8:offset+8+length])
-		print(sval)
+		print("Section Value: %d" % sval)
 	elif stype == 0x4:
 		length = slen / 8
 		sval = struct.unpack("<" + str(length) + "Q", data[offset+8:offset+8+length])
-		print(sval)
+		print("Section Value: %d" % sval[0])
 	elif stype == 0x5:
 		length = slen / 8
 		sval = struct.unpack("<" + str(length) + "Q", data[offset+8:offset+8+length])
-		print(sval)
+		print("Section Value: %d" % sval[0])
 	elif stype == 0x6:
 		if slen == 16:
 			sval = struct.unpack("<QQ", data[offset+8:offset+8 + slen])
-			print(sval)
+			print("Section Value: " + str(sval) )
 		else:		
 			bork("Bad slen! Got %d, expected %d" % (int(slen), int(16)))
 	elif stype == 0x7:
 		if slen == 4:
 			sval = struct.unpack("<L", data[offset+8:offset+8 + slen])
 			if sval < 0 or sval > sec_count:
-				bork("Bad sval! Got %d, expected 0 to %d" % (int(sval), int(sec_count -1)))		
-			print(sval)
+				bork("Bad sval! Got %d, expected 0 to %d" % (int(sval), int(sec_count -1)))
+			print("Section Value" + sval)
 		else:		
 			bork("Bad slen! Got %d, expected %d" % (int(slen), int(4)))
 	elif stype == 0x8:
@@ -87,10 +89,12 @@ while i < int(sec_count):
 		png = code + data
 	elif stype == 0x9:
 		sval = struct.unpack("<" + str(slen) + "s", data[offset+8:offset+8+slen])
-		print(sval)
+		code = struct.pack('6L', 'G','I','F','8','7','a')
+		GIF = code + data
 	elif stype == 0xA:
 		sval = struct.unpack("<" + str(slen) + "s", data[offset+8:offset+8+slen])
-		print(sval)
+		code = struct.pack('6L', 'G','I','F','8','9','a')
+		GIF = code + data
 	else:
 		bork("Bad stype! Got %d, expected %d" % (int(slen) ))
 	offset += 8 + slen 	
