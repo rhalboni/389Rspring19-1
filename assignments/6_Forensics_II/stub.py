@@ -10,7 +10,11 @@ def bork(msg):
 
 
 # Some constants. You shouldn't need to change these.
+<<<<<<< HEAD
 MAGIC = 0x8badf00d
+=======
+MAGIC = 0x8BADF00D
+>>>>>>> upstream/master
 VERSION = 1
 
 if len(sys.argv) < 2:
