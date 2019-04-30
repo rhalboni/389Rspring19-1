@@ -6,6 +6,7 @@ import socket
 import time
 
 def server_crack():
+<<<<<<< HEAD
     i = 0
     hash_file = open('hashes.txt','r')
     hashes = hash_file.read().splitlines()
@@ -15,6 +16,14 @@ def server_crack():
     server_ip = '134.209.128.58'
     server_port = 1337
     password = '\n'
+=======
+    hashes = # open and read hashes.txt
+    passwords = # open and read passwords.txt
+    characters = string.ascii_lowercase
+    server_ip = 'put_your_ip_here'
+    server_port = 00000
+
+>>>>>>> upstream/master
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     s.connect((server_ip, server_port))
     data = s.recv(1024).decode()

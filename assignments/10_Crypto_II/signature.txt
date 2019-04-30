@@ -1,0 +1,10 @@
+"My name is Rami Halboni!"
+
+
+Once you've created this file, use `gpg` to sign the file with this new imported
+key and output it as `signature.txt.asc`. make sure to use the `--clearsign`
+flag to produce an ASCII-armored output.
+
+Upload only the `signature.txt.asc` file, and make sure it is named as such,
+otherwise the grading script will NOT find it and properly, and you will not
+receive credit for this part.
